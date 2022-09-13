@@ -1,0 +1,29 @@
+vaults:
+  - name: kv
+    type: age-file
+    spec:
+      path: ./fixtures/test-agefile
+      identity: ./fixtures/test-identity
+
+secrets:
+  - type: secret
+    vault: kv
+    name: test
+
+transformations:
+  - type: template
+    in:
+      - test
+    out: test-out
+    spec:
+      template: |
+        sample {{ .test }}
+
+
+sinks:
+  - type: file
+    var: test-out
+    spec:
+      path: ./go-secrethelper-template.dat
+      mode: 400
+

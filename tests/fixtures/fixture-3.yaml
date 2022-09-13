@@ -1,0 +1,19 @@
+vaults:
+  - name: kv
+    type: age-file
+    spec:
+      path: ./fixtures/test-agefile
+      identity: ./fixtures/test-identity
+
+secrets:
+  - type: secret
+    vault: ${VAULT_NAME}
+    name: test
+
+sinks:
+  - type: file
+    var: test
+    spec:
+      path: ./go-secrethelper-test3.dat
+      mode: 400
+

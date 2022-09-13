@@ -1,0 +1,19 @@
+vaults:
+  - name: kv1
+    type: mock
+    spec:
+      url: https://sample-kv.example.net/
+
+secrets:
+  - type: secret
+    vault: kv1
+    name: databasePwd
+
+sinks:
+  - type: mock
+    var: databasePwd
+    spec:
+      path: ./dbpwd.txt
+      mode: 400
+      user: 1000
+

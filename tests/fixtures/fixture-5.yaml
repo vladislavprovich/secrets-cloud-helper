@@ -1,0 +1,28 @@
+vaults:
+  - name: kv
+    type: age-file
+    spec:
+      path: ./fixtures/test-agefile-5
+      identity: ./fixtures/test-identity
+
+secrets:
+  - type: secret
+    vault: kv
+    name: test
+
+transformations:
+  - type: jq
+    in:
+      - test
+    out: test-jq-extracted
+    spec:
+      q: ".json"
+      raw: true
+
+sinks:
+  - type: file
+    var: test-jq-extracted
+    spec:
+      path: ./go-secrethelper-test5.dat
+      mode: 400
+
