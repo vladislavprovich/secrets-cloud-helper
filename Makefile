@@ -32,9 +32,3 @@ gen:
 .PHONY: release
 release:
 	goreleaser --snapshot --rm-dist
-
-.PHONY: clean
-clean:
-	rm -rf dist/*
-	rm -f cover.out
-	go clean -testcache

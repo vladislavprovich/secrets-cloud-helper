@@ -6,7 +6,7 @@ package mocks
 
 import (
 	context "context"
-	core "go-secretshelper/pkg/core"
+	core "github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"

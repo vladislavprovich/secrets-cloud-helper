@@ -47,7 +47,6 @@ func NewConfig(in io.Reader) (*Config, error) {
 
 // NewConfigWithEnvSubst works like NewConfig with environment variable substitution
 func NewConfigWithEnvSubst(in io.Reader) (*Config, error) {
-	// read all of in and run substitution on it
 	buf := new(strings.Builder)
 	_, err := io.Copy(buf, in)
 	if err != nil {
@@ -60,7 +59,7 @@ func NewConfigWithEnvSubst(in io.Reader) (*Config, error) {
 	}
 
 	res := NewDefaultConfig()
-	if err := yaml.Unmarshal([]byte(inSubst), res); err != nil {
+	if err = yaml.Unmarshal([]byte(inSubst), res); err != nil {
 		return res, err
 	}
 

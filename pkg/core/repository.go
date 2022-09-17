@@ -1,10 +1,10 @@
 // Package core contains the components for a repository
+//
 //go:generate mockgen -package mocks -destination=mocks/mock_repository.go go-secretshelper/pkg/core Repository
 package core
 
 import "fmt"
 
-// RepositoryError ...
 type RepositoryError struct {
 	Reason string
 	Info   string

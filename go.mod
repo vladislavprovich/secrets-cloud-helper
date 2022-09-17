@@ -1,4 +1,4 @@
-module go-secretshelper
+module github.com/vladislavprovich/secrets-cloud-helper
 
 go 1.17
 

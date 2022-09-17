@@ -40,7 +40,5 @@ func (vaults *Vaults) GetVaultByName(name string) *Vault {
 
 // VaultAccessorPort is able to pull secrets from a Vault
 type VaultAccessorPort interface {
-
-	// RetrieveSecret retrieves a secret from given vault
 	RetrieveSecret(context.Context, *Defaults, *Vault, *Secret) (*Secret, error)
 }
