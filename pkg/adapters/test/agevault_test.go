@@ -3,20 +3,14 @@ package test
 import (
 	"context"
 	"github.com/spf13/afero"
-	"go-secretshelper/pkg/adapters"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/adapters"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"log"
 	"os"
 	"reflect"
 	"testing"
 )
 
-// Key for age container testing
-//# created: 2021-11-04T18:20:18+01:00
-//# public key: age1dfamnuh6cwvk7c4p3nrlr027tm0urk5qqh49tq2udmxhzkltgayst7kuf3
-//AGE-SECRET-KEY-1KGV83XLPAU7HVC3TS7WE5GS2QG5ECYH97W9ZPPGWAYUHCTYNEGVS8NMFQP
-
-// echo '{ "test": "s3cr3t" }' | age -e -r age1dfamnuh6cwvk7c4p3nrlr027tm0urk5qqh49tq2udmxhzkltgayst7kuf3 -a
 const ageVaultFile = `-----BEGIN AGE ENCRYPTED FILE-----
 YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBRTEM2NE9CQVNMSlRLSlhH
 TXZIS1lDbjBIbWhOaDVsQjBuRklBTFpWNG5FCmFvZEJOY20wZThGRHFVVC9rUTFE

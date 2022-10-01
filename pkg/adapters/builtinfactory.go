@@ -2,7 +2,7 @@ package adapters
 
 import (
 	"github.com/spf13/afero"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"log"
 )
 

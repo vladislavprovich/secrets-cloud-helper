@@ -3,8 +3,8 @@ package test
 import (
 	"context"
 	"encoding/json"
-	"go-secretshelper/pkg/adapters"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/adapters"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"io/ioutil"
 	"log"
 	"reflect"

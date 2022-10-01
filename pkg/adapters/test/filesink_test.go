@@ -3,8 +3,8 @@ package test
 import (
 	"context"
 	"github.com/spf13/afero"
-	"go-secretshelper/pkg/adapters"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/adapters"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"log"
 	"reflect"
 	"testing"

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/Azure/azure-sdk-for-go/profiles/preview/keyvault/keyvault"
 	"github.com/Azure/azure-sdk-for-go/services/keyvault/auth"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"log"
 	"net/url"
 )

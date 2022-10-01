@@ -9,7 +9,7 @@ import (
 	"filippo.io/age/armor"
 	"fmt"
 	"github.com/spf13/afero"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"gopkg.in/yaml.v2"
 	"io"
 	"log"

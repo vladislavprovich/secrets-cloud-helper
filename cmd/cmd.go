@@ -5,8 +5,8 @@ import (
 	"flag"
 	"fmt"
 	"github.com/spf13/afero"
-	"go-secretshelper/pkg/adapters"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/adapters"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"io/ioutil"
 	"log"
 	"os"
@@ -18,13 +18,13 @@ var (
 )
 
 const (
-	// ExitCodeOk is ok
+	// ExitCodeOk is ok.
 	ExitCodeOk = 0
 
-	// ExitCodeNoOrUnknownCommand we're not able to run the command
+	// ExitCodeNoOrUnknownCommand we're not able to run the command.
 	ExitCodeNoOrUnknownCommand = 1
 
-	// ExitCodeInvalidConfig something wrong with config
+	// ExitCodeInvalidConfig something wrong with config.
 	ExitCodeInvalidConfig = 2
 )
 
@@ -69,21 +69,18 @@ func main() {
 			os.Exit(ExitCodeNoOrUnknownCommand)
 		}
 
-		// read config
 		config, err := core.NewConfigFromFile(*configFlag, *envFlag)
 		if err != nil {
 			fmt.Printf("Unable to read config from file %s: %s\n", *configFlag, err)
 			os.Exit(ExitCodeInvalidConfig)
 		}
 
-		// validate
 		f := adapters.NewBuiltinFactory(l, afero.NewOsFs())
-		if err := config.Validate(f); err != nil {
+		if err = config.Validate(f); err != nil {
 			fmt.Fprintf(os.Stderr, "Error validating configuration: %s\n", err)
 			os.Exit(ExitCodeInvalidConfig)
 		}
 
-		// run
 		cmd := core.NewMainUseCaseImpl(l)
 
 		err = cmd.Process(context.Background(), f,

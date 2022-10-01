@@ -5,7 +5,7 @@ import (
 	"filippo.io/age"
 	"filippo.io/age/armor"
 	"fmt"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"io"
 	"log"
 	"strings"

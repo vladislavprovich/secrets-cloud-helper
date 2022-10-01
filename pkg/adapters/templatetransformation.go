@@ -3,7 +3,7 @@ package adapters
 import (
 	"context"
 	"fmt"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"log"
 	"strings"
 	"text/template"

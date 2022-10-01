@@ -2,7 +2,7 @@ package test
 
 import (
 	"github.com/spf13/afero"
-	"go-secretshelper/pkg/adapters"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/adapters"
 	"io/ioutil"
 	"log"
 	"testing"

@@ -1,7 +1,7 @@
 package test
 
 import (
-	"go-secretshelper/pkg/adapters"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/adapters"
 	"testing"
 )
 

@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"github.com/spf13/afero"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"log"
 	"os"
 	"strconv"

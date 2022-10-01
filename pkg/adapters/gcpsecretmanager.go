@@ -4,7 +4,7 @@ import (
 	secretmanager "cloud.google.com/go/secretmanager/apiv1"
 	"context"
 	"fmt"
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	secretmanagerpb "google.golang.org/genproto/googleapis/cloud/secretmanager/v1"
 	"log"
 )

@@ -1,7 +1,7 @@
 package adapters
 
 import (
-	"go-secretshelper/pkg/core"
+	"github.com/vladislavprovich/secrets-cloud-helper/pkg/core"
 	"sync"
 )
 
